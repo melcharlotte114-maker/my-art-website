@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f6f2;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 50px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 50px;
+}
+
+
+/* Hero */
+
+main > section:first-child {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+main > section:first-child h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+main > section:first-child p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* Button */
+
+button {
+    margin-top: 25px;
+    padding: 14px 28px;
+
+    border: 1px solid #222;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #222;
+    color: white;
+}
+
+
+/* Works */
+
+main > section:nth-child(2) {
+    margin-top: 80px;
+}
+
+main > section:nth-child(2) h2 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+main > section:nth-child(2) img {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+
+    margin-top: 40px;
+}
+
+
+/* Artwork information */
+
+main > section:nth-child(2) h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 25px;
+}
+
+main > section:nth-child(2) p {
+    color: #666;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 50px;
+
+    border-top: 1px solid #ddd;
+
+    text-align: center;
+
+    color: #777;
+}
+/* Gallery */
+
+#gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+    margin-top: 40px;
+}
+
+
+/* Artwork cards */
+
+#gallery > div {
+    width: 100%;
+}
+
+#gallery img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    margin: 0;
+}
+
+#gallery h3 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+#gallery p {
+    margin: 5px 0;
+}
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    #gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 60px 20px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 40px;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Artwork Detail Page */
+
+.artwork-detail {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.artwork-detail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.artwork-info {
+    padding-top: 20px;
+}
+
+.artwork-info h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.artwork-info h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+.artwork-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.artwork-info button {
+    margin-top: 30px;
+}
+
+
+/* Artwork Detail - Mobile */
+
+@media (max-width: 700px) {
+
+    .artwork-detail {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .artwork-info {
+        padding-top: 0;
+    }
+
+}
+/* Contact Page */
+
+.contact {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.contact label {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.contact textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact button {
+    align-self: flex-start;
+}
+
+.privacy-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+.privacy-consent input {
+    width: auto;
+    margin-top: 4px;
+}
