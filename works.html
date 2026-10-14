@@ -48,5 +48,27 @@
     <script src="artworks.js"></script>
     <script src="works.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const worksText = document.querySelectorAll(
+        ".works-page > h2, .works-page > .works-intro"
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    worksText.forEach((element) => {
+        observer.observe(element);
+    });
+});
+</script>
 </body>
 </html>

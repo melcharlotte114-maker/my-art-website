@@ -73,7 +73,60 @@
     <footer>
         <p>Copyright 2026 Wu Chia Hsuan</p>
     </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   const aboutTitle = document.querySelector(".about-page > h2");
 
+if (aboutTitle) {
+    const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                titleObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    titleObserver.observe(aboutTitle);
+}
+    const aboutText = document.querySelector(".about-text");
+
+    if (!aboutText) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(aboutText);
+    // About Portrait - Mobile Scroll Color
+const aboutImage = document.querySelector(".about-image img");
+
+if (aboutImage) {
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+    entry.target.parentElement.classList.add("is-color");
+} else {
+    entry.target.parentElement.classList.remove("is-color");
+}
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    imageObserver.observe(aboutImage);
+}
+});
+</script>
 </body>
 
 </html>

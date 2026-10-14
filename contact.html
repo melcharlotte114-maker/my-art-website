@@ -112,6 +112,26 @@
     <script src="artworks.js"></script>
     <script src="contact.js"></script>
 
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const contactText = document.querySelectorAll(
+        ".contact > h2, .contact > p"
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    contactText.forEach((element) => observer.observe(element));
+});
+</script>
 </body>
 
 </html>

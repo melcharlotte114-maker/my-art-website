@@ -59,18 +59,18 @@ main {
 
 /* Hero */
 
-main > section:hero {
+main > section.hero {
     text-align: center;
     padding: 80px 20px;
 }
 
-main > section:hero h2 {
+main > section.hero h2 {
     font-size: 60px;
     font-weight: normal;
     margin-bottom: 20px;
 }
 
-main > section:hero p {
+main > section.hero p {
     font-size: 18px;
     color: #666;
 }
@@ -863,4 +863,175 @@ main > section.contact > h2 {
     line-height: 1.2;
     letter-spacing: -1px;
     text-align: left;
+}
+/* Homepage Hero - Artistic Entrance Animation */
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main > section.hero h2 {
+    animation: heroFadeIn 1.8s ease-out both;
+}
+
+main > section.hero p {
+    animation: heroFadeIn 1.8s ease-out 0.4s both;
+}
+
+main > section.hero button {
+    animation: heroFadeIn 1.8s ease-out 0.8s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main > section.hero h2,
+    main > section.hero p,
+    main > section.hero button {
+        animation: none;
+    }
+}
+/* Homepage Hero Title */
+
+main > section.hero h2 {
+    font-size: clamp(52px, 6vw, 80px);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+/* Gallery - Scroll Reveal Animation */
+
+@media (prefers-reduced-motion: no-preference) {
+    .featured-gallery .artwork-card {
+        opacity: 0;
+        transform: translateY(35px);
+        transition:
+            opacity 1.4s ease,
+            transform 1.4s ease;
+    }
+
+    .featured-gallery .artwork-card.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Mobile Artwork - Grayscale to Color */
+
+@media (max-width: 700px) {
+    #works-grid .artwork-card img {
+        filter: grayscale(100%);
+        transition: filter 1.2s ease;
+    }
+
+    #works-grid .artwork-card.is-color img {
+        filter: grayscale(0%);
+    }
+}
+/* Home Gallery - Mobile Grayscale to Color */
+
+@media (max-width: 700px) {
+    .featured-gallery .artwork-card img {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+    }
+
+    .featured-gallery .artwork-card.is-color img {
+        filter: grayscale(0%) !important;
+    }
+}
+/* About Title - Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .about-page > h2 {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .about-page > h2.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* About Page - Text Scroll Reveal (Desktop) */
+
+@media (prefers-reduced-motion: no-preference) {
+    .about-text {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .about-text.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Portrait - Mobile Scroll Color */
+
+@media (max-width: 700px) {
+    .about-image img {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+    }
+
+    .about-image.is-color img {
+        filter: grayscale(0%) !important;
+    }
+}
+/* Works Page - Desktop Text Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .works-page > h2,
+.works-page > .works-intro {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+    .works-page > h2.is-visible,
+    .works-page > .works-intro.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Shop Page - Text Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .shop-page > .shop-label,
+    .shop-page > h2,
+    .shop-page > .shop-intro {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .shop-page > .shop-label.is-visible,
+    .shop-page > h2.is-visible,
+    .shop-page > .shop-intro.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}/* Contact Page - Text Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .contact > h2,
+    .contact > p {
+        opacity: 0;
+       transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .contact > h2.is-visible,
+    .contact > p.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

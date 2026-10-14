@@ -21,3 +21,30 @@ artworks.forEach(function (artwork) {
 
     worksGrid.appendChild(card);
 });
+// Mobile Works - Grayscale to Color
+
+function initMobileArtworkColor() {
+    const artworkCards = document.querySelectorAll(
+        "#works-grid .artwork-card"
+    );
+
+    if (!artworkCards.length) return;
+
+   const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-color");
+        } else {
+            entry.target.classList.remove("is-color");
+        }
+    });
+}, {
+    threshold: 0.6
+});
+
+    artworkCards.forEach((card) => {
+        observer.observe(card);
+    });
+}
+
+window.addEventListener("load", initMobileArtworkColor);

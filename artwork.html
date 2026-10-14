@@ -66,6 +66,27 @@
 
 <script src="artworks.js"></script>
 <script src="artwork.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutText = document.querySelector(".about-text");
+
+    if (!aboutText) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(aboutText);
+});
+</script>
+
 </body>
 
 </html>
