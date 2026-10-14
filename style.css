@@ -507,3 +507,86 @@ footer {
         font-size: 26px;
     }
 }
+/* Shop Page - Grayscale Style */
+
+main > section.shop-page {
+    text-align: left;
+    padding: 60px 20px 100px;
+    background: #f7f6f2;
+    color: #222;
+}
+
+.shop-label {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+main > section.shop-page h2 {
+    font-size: 52px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+}
+
+.shop-intro {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+}
+
+/* Shop Product Grid */
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.shop-item {
+    text-align: left;
+}
+
+.shop-placeholder {
+    background: #e8e8e6;
+    color: #888;
+    aspect-ratio: 4 / 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.shop-item h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.shop-item p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Shop Page - Mobile */
+
+@media (max-width: 700px) {
+    main > section.shop-page {
+        padding: 40px 20px 70px;
+    }
+
+    main > section.shop-page h2 {
+        font-size: 36px;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
