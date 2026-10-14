@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -52,24 +53,24 @@ nav a:hover {
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 50px;
+    padding: 64px 50px 100px;
 }
 
 
 /* Hero */
 
-main > section:first-child {
+main > section:hero {
     text-align: center;
     padding: 80px 20px;
 }
 
-main > section:first-child h2 {
+main > section:hero h2 {
     font-size: 60px;
     font-weight: normal;
     margin-bottom: 20px;
 }
 
-main > section:first-child p {
+main > section:hero p {
     font-size: 18px;
     color: #666;
 }
@@ -271,8 +272,9 @@ footer {
 /* Contact Page */
 
 .contact {
-    max-width: 700px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
 }
 
 .contact h2 {
@@ -330,6 +332,7 @@ footer {
 .about-page {
     background: #f7f6f2;
     color: #222;
+    padding: 0;
 }
 
 .about-label {
@@ -364,14 +367,14 @@ footer {
 
 .about-page {
     text-align: left;
-    padding: 20px 0;
+    padding: 0;
 }
 
 .about-page h2 {
     font-size: 52px;
     font-weight: normal;
     margin-top: 15px;
-    margin-bottom: 70px;
+    margin-bottom: 48px;
     letter-spacing: -1px;
 }
 
@@ -804,4 +807,60 @@ main > section.works-page h2 {
 
 .featured-gallery .view-all-works:hover {
     color: #888;
+}
+/* Art Book Typography */
+header h1,
+main h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+/* Global Body Typography */
+body {
+    font-family: "DM Sans", "Helvetica Neue", sans-serif;
+}
+/* Interior Page Heading Layout */
+.works-page,
+.about-page,
+.shop-page {
+    text-align: left;
+}
+
+.works-page h2,
+.about-page h2,
+.shop-page h2 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+/* Shared Page Alignment */
+
+main > section.works-page,
+main > section.about-page,
+main > section.shop-page,
+main > section.contact {
+    padding-top: 80px;
+     padding-left: 0;
+    padding-right: 0;
+}
+/* Shared Page Content Alignment */
+
+main > section.works-page > :first-child,
+main > section.about-page > :first-child,
+main > section.shop-page > :first-child,
+main > section.contact > :first-child {
+    margin-top: 0;
+}
+/* Shared Page Title Style */
+
+main > section.works-page > h2,
+main > section.about-page > h2,
+main > section.shop-page > h2,
+main > section.contact > h2 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    text-align: left;
 }
