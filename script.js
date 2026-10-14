@@ -1,7 +1,9 @@
     const gallery = document.getElementById("gallery");
 
 
-artworks.forEach(function(artwork) {
+artworks.filter(function (artwork) {
+    return artwork.featured === true;
+}).forEach(function (artwork) {
 
     const artworkElement = document.createElement("div");
 
@@ -18,10 +20,7 @@ artworks.forEach(function(artwork) {
 
         <p>${artwork.year}</p>
 
-        <p>${artwork.material} · ${artwork.size}</p>
 
-        <p>${artwork.price}</p>
-        <p>${artwork.status}</p>
     `;
 
     gallery.appendChild(artworkElement);

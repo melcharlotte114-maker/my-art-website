@@ -590,3 +590,218 @@ main > section.shop-page h2 {
         gap: 40px;
     }
 }
+/* Mobile Homepage */
+
+@media (max-width: 700px) {
+
+    main > section:first-child h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+}
+/* Mobile Homepage */
+
+@media (max-width: 700px) {
+
+    main > section:first-child h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+}
+/* Mobile - Main Spacing */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 30px 20px;
+    }
+
+}
+/* Homepage Hero - Mobile */
+
+@media (max-width: 700px) {
+    main > section.hero {
+        padding: 30px 10px 50px;
+        min-height: 0;
+        height: auto;
+    }
+}
+/* Works Page - Grayscale Portfolio */
+
+main > section.works-page {
+    text-align: left;
+    padding: 30px 0 80px;
+    color: #222;
+}
+
+.works-label {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+main > section.works-page h2 {
+    font-size: 52px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.works-intro {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+}
+
+/* Works Artwork Cards */
+
+#works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 30px;
+}
+
+#works-grid .artwork-card {
+    min-width: 0;
+}
+
+#works-grid .artwork-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+    display: block;
+    background: #f0efed;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+#works-grid .artwork-card img:hover {
+    filter: grayscale(0%);
+}
+
+#works-grid .artwork-card a {
+    color: #222;
+    text-decoration: none;
+}
+
+#works-grid .artwork-card h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 18px 0 12px;
+}
+
+#works-grid .artwork-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+/* Works Page - Mobile */
+
+@media (max-width: 700px) {
+    main > section.works-page {
+        padding: 20px 0 50px;
+    }
+
+    main > section.works-page h2 {
+        font-size: 36px;
+    }
+
+    #works-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+}
+/* Homepage - Featured Gallery */
+
+.featured-gallery {
+    padding: 70px 0 100px;
+    text-align: left;
+}
+
+.featured-gallery > h2 {
+    font-size: 44px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.featured-gallery > p {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+/* Featured Artwork */
+
+.featured-gallery #gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 110px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.featured-gallery #gallery img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    display: block;
+    background: #f0efed;
+}
+
+.featured-gallery #gallery a {
+    color: #222;
+    text-decoration: none;
+}
+
+.featured-gallery #gallery h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 22px;
+}
+
+/* Featured Gallery - Mobile */
+
+@media (max-width: 700px) {
+    .featured-gallery {
+        padding: 40px 0 60px;
+    }
+
+    .featured-gallery > h2 {
+        font-size: 34px;
+    }
+
+    .featured-gallery #gallery {
+        gap: 45px;
+    }
+
+    .featured-gallery #gallery h3 {
+        font-size: 20px;
+    }
+}
+/* Homepage - View All Works Link */
+
+.featured-gallery .view-all-works {
+    display: table;
+    margin: 60px auto 0;
+    padding-bottom: 8px;
+
+    color: #222;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid #888;
+
+    transition: color 0.3s ease;
+}
+
+.featured-gallery .view-all-works:hover {
+    color: #888;
+}

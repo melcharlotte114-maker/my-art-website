@@ -2,6 +2,7 @@ const artworks = [
 
     {
         id: 1,
+        featured: true,
         title: "Ma Langue",
         year: "2026",
         material: "3D printed on ceramique",
@@ -14,6 +15,7 @@ const artworks = [
 
     {
         id: 2,
+        featured: true,
         title: "Singing Words(Black)",
         year: "2026",
         material: "Ink Printed on paper",
