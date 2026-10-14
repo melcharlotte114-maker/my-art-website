@@ -325,3 +325,185 @@ footer {
     width: auto;
     margin-top: 4px;
 }
+/* About Page - Grayscale Style */
+
+.about-page {
+    background: #f7f6f2;
+    color: #222;
+}
+
+.about-label {
+    color: #888;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+/* About Page - Artist Portrait */
+
+.about-image img {
+    width: 100%;
+    height: 580px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
+}
+
+.about-image img:hover {
+    filter: grayscale(0%);
+}
+
+.about-image img:hover {
+    filter: grayscale(0%);
+}
+/* About Page Layout */
+
+.about-page {
+    text-align: left;
+    padding: 20px 0;
+}
+
+.about-page h2 {
+    font-size: 52px;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    letter-spacing: -1px;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Artist Portrait Placeholder */
+
+.about-image-placeholder {
+    background: #e8e8e6;
+    color: #888;
+
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* About Text */
+
+.about-text h3 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.about-contact-link {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: #222;
+    text-decoration: none;
+
+    border-bottom: 1px solid #888;
+    padding-bottom: 8px;
+}
+
+.about-contact-link:hover {
+    color: #888;
+}
+
+/* About Page - Mobile */
+
+@media (max-width: 700px) {
+
+    .about-page h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image-placeholder {
+        min-height: 350px;
+    }
+
+    .about-text h3 {
+        font-size: 26px;
+    }
+
+}
+/* About Portrait - Mobile */
+
+@media (max-width: 700px) {
+
+    .about-image img {
+        height: 420px;
+    }
+
+}
+/* About Page - Editorial Typography */
+
+.about-page {
+    text-align: left;
+}
+
+.about-page h2 {
+    text-align: left;
+    font-size: 48px;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+}
+
+.about-label {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #888;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-top: 0;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #666;
+}
+
+/* About Typography - Mobile */
+
+@media (max-width: 700px) {
+    .about-page h2 {
+        font-size: 36px;
+    }
+
+    .about-text h3 {
+        font-size: 26px;
+    }
+}
