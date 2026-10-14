@@ -1035,3 +1035,23 @@ main > section.hero h2 {
         transform: translateY(0);
     }
 }
+/* Privacy Policy - Page Title */
+.privacy > h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+/* Privacy Policy - Title Reveal */
+@media (prefers-reduced-motion: no-preference) {
+    .privacy > h2 {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .privacy > h2.is-visible {
+        opacity: 1;
+         transform: translateY(0);
+    }
+}

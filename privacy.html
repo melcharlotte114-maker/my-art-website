@@ -72,6 +72,26 @@
 
     </footer>
 
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const privacyTitle = document.querySelector(".privacy > h2");
+
+    if (!privacyTitle) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(privacyTitle);
+});
+</script>
 </body>
 
 </html>
