@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Wu Chia Hsuan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Wu Chia Hsuan</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="works-page">
+            <p class="works-label">PROJECT</p>
+            <h2 id="project-title"></h2>
+            <p id="project-year" class="works-intro"></p>
+
+            <div class="project-hero">
+                <div class="project-curtain">
+                    <h3>About the Project</h3>
+                    <p id="project-description-text"></p>
+                </div>
+            </div>
+
+            <div class="project-gallery-wrapper">
+                <button class="gallery-arrow gallery-prev"
+                        type="button"
+                        aria-label="Previous artworks">
+                    <span class="gallery-dot" aria-hidden="true"></span>
+                </button>
+
+                <div id="project-artworks" class="gallery-grid"></div>
+
+                <button class="gallery-arrow gallery-next"
+                        type="button"
+                        aria-label="Next artworks">
+                    <span class="gallery-dot" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 Wu Chia Hsuan</p>
+    </footer>
+
+    <script src="artworks.js"></script>
+    <script src="projects.js"></script>
+    <script src="project.js"></script>
+</body>
+</html>

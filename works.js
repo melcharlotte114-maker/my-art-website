@@ -1,22 +1,19 @@
-// Display all artworks on the Works page
+// Display project covers on the Works page
 
 const worksGrid = document.getElementById("works-grid");
 
-artworks.forEach(function (artwork) {
+projects.forEach(function (project) {
     const card = document.createElement("div");
 
     card.className = "artwork-card";
 
     card.innerHTML = `
-        <a href="artwork.html?id=${artwork.id}">
-            <img src="${artwork.image}" alt="${artwork.title}">
-            <h3>${artwork.title}</h3>
+        <a href="project.html?id=${project.id}">
+            <img src="${project.cover}" alt="${project.title}">
+            <h3>${project.title}</h3>
         </a>
 
-        <p>${artwork.year}</p>
-        <p>${artwork.material} · ${artwork.size}</p>
-        <p>${artwork.price}</p>
-        <p>${artwork.status}</p>
+        <p>${project.year}</p>
     `;
 
     worksGrid.appendChild(card);

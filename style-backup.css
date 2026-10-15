@@ -1,0 +1,1199 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f6f2;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 50px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 50px 100px;
+}
+
+
+/* Hero */
+
+main > section.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+main > section.hero h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+main > section.hero p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* Button */
+
+button {
+    margin-top: 25px;
+    padding: 14px 28px;
+
+    border: 1px solid #222;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #222;
+    color: white;
+}
+
+
+/* Works */
+
+main > section:nth-child(2) {
+    margin-top: 80px;
+}
+
+main > section:nth-child(2) h2 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+main > section:nth-child(2) img {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+
+    margin-top: 40px;
+}
+
+
+/* Artwork information */
+
+main > section:nth-child(2) h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 25px;
+}
+
+main > section:nth-child(2) p {
+    color: #666;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 50px;
+
+    border-top: 1px solid #ddd;
+
+    text-align: center;
+
+    color: #777;
+}
+/* Gallery */
+
+#gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+    margin-top: 40px;
+}
+
+
+/* Artwork cards */
+
+#gallery > div {
+    width: 100%;
+}
+
+#gallery img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    margin: 0;
+}
+
+#gallery h3 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+#gallery p {
+    margin: 5px 0;
+}
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    #gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 60px 20px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 40px;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Artwork Detail Page */
+
+.artwork-detail {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.artwork-detail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.artwork-info {
+    padding-top: 20px;
+}
+
+.artwork-info h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.artwork-info h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+.artwork-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.artwork-info button {
+    margin-top: 30px;
+}
+
+
+/* Artwork Detail - Mobile */
+
+@media (max-width: 700px) {
+
+    .artwork-detail {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .artwork-info {
+        padding-top: 0;
+    }
+
+}
+/* Contact Page */
+
+.contact {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.contact h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.contact label {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.contact textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact button {
+    align-self: flex-start;
+}
+
+.privacy-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+.privacy-consent input {
+    width: auto;
+    margin-top: 4px;
+}
+/* About Page - Grayscale Style */
+
+.about-page {
+    background: #f7f6f2;
+    color: #222;
+    padding: 0;
+}
+
+.about-label {
+    color: #888;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+/* About Page - Artist Portrait */
+
+.about-image img {
+    width: 100%;
+    height: 580px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
+}
+
+.about-image img:hover {
+    filter: grayscale(0%);
+}
+
+.about-image img:hover {
+    filter: grayscale(0%);
+}
+/* About Page Layout */
+
+.about-page {
+    text-align: left;
+    padding: 0;
+}
+
+.about-page h2 {
+    font-size: 52px;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Artist Portrait Placeholder */
+
+.about-image-placeholder {
+    background: #e8e8e6;
+    color: #888;
+
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* About Text */
+
+.about-text h3 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.about-contact-link {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: #222;
+    text-decoration: none;
+
+    border-bottom: 1px solid #888;
+    padding-bottom: 8px;
+}
+
+.about-contact-link:hover {
+    color: #888;
+}
+
+/* About Page - Mobile */
+
+@media (max-width: 700px) {
+
+    .about-page h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image-placeholder {
+        min-height: 350px;
+    }
+
+    .about-text h3 {
+        font-size: 26px;
+    }
+
+}
+/* About Portrait - Mobile */
+
+@media (max-width: 700px) {
+
+    .about-image img {
+        height: 420px;
+    }
+
+}
+/* About Page - Editorial Typography */
+
+.about-page {
+    text-align: left;
+}
+
+.about-page h2 {
+    text-align: left;
+    font-size: 48px;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+}
+
+.about-label {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #888;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-top: 0;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #666;
+}
+
+/* About Typography - Mobile */
+
+@media (max-width: 700px) {
+    .about-page h2 {
+        font-size: 36px;
+    }
+
+    .about-text h3 {
+        font-size: 26px;
+    }
+}
+/* Shop Page - Grayscale Style */
+
+main > section.shop-page {
+    text-align: left;
+    padding: 60px 20px 100px;
+    background: #f7f6f2;
+    color: #222;
+}
+
+.shop-label {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+main > section.shop-page h2 {
+    font-size: 52px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+}
+
+.shop-intro {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+}
+
+/* Shop Product Grid */
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.shop-item {
+    text-align: left;
+}
+
+.shop-placeholder {
+    background: #e8e8e6;
+    color: #888;
+    aspect-ratio: 4 / 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.shop-item h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.shop-item p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Shop Page - Mobile */
+
+@media (max-width: 700px) {
+    main > section.shop-page {
+        padding: 40px 20px 70px;
+    }
+
+    main > section.shop-page h2 {
+        font-size: 36px;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+/* Mobile Homepage */
+
+@media (max-width: 700px) {
+
+    main > section:first-child h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+}
+/* Mobile Homepage */
+
+@media (max-width: 700px) {
+
+    main > section:first-child h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+}
+/* Mobile - Main Spacing */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 30px 20px;
+    }
+
+}
+/* Homepage Hero - Mobile */
+
+@media (max-width: 700px) {
+    main > section.hero {
+        padding: 30px 10px 50px;
+        min-height: 0;
+        height: auto;
+    }
+}
+/* Works Page - Grayscale Portfolio */
+
+main > section.works-page {
+    text-align: left;
+    padding: 30px 0 80px;
+    color: #222;
+}
+
+.works-label {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+main > section.works-page h2 {
+    font-size: 52px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.works-intro {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+}
+
+/* Works Artwork Cards */
+
+#works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 30px;
+}
+
+#works-grid .artwork-card {
+    min-width: 0;
+}
+
+#works-grid .artwork-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+    display: block;
+    background: #f0efed;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+#works-grid .artwork-card img:hover {
+    filter: grayscale(0%);
+}
+
+#works-grid .artwork-card a {
+    color: #222;
+    text-decoration: none;
+}
+
+#works-grid .artwork-card h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 18px 0 12px;
+}
+
+#works-grid .artwork-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+/* Works Page - Mobile */
+
+@media (max-width: 700px) {
+    main > section.works-page {
+        padding: 20px 0 50px;
+    }
+
+    main > section.works-page h2 {
+        font-size: 36px;
+    }
+
+    #works-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+}
+/* Homepage - Featured Gallery */
+
+.featured-gallery {
+    padding: 70px 0 100px;
+    text-align: left;
+}
+
+.featured-gallery > h2 {
+    font-size: 44px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.featured-gallery > p {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+/* Featured Artwork */
+
+.featured-gallery #gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 110px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.featured-gallery #gallery img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    display: block;
+    background: #f0efed;
+}
+
+.featured-gallery #gallery a {
+    color: #222;
+    text-decoration: none;
+}
+
+.featured-gallery #gallery h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 22px;
+}
+
+/* Featured Gallery - Mobile */
+
+@media (max-width: 700px) {
+    .featured-gallery {
+        padding: 40px 0 60px;
+    }
+
+    .featured-gallery > h2 {
+        font-size: 34px;
+    }
+
+    .featured-gallery #gallery {
+        gap: 45px;
+    }
+
+    .featured-gallery #gallery h3 {
+        font-size: 20px;
+    }
+}
+/* Homepage - View All Works Link */
+
+.featured-gallery .view-all-works {
+    display: table;
+    margin: 60px auto 0;
+    padding-bottom: 8px;
+
+    color: #222;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid #888;
+
+    transition: color 0.3s ease;
+}
+
+.featured-gallery .view-all-works:hover {
+    color: #888;
+}
+/* Art Book Typography */
+header h1,
+main h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+/* Global Body Typography */
+body {
+    font-family: "DM Sans", "Helvetica Neue", sans-serif;
+}
+/* Interior Page Heading Layout */
+.works-page,
+.about-page,
+.shop-page {
+    text-align: left;
+}
+
+.works-page h2,
+.about-page h2,
+.shop-page h2 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+/* Shared Page Alignment */
+
+main > section.works-page,
+main > section.about-page,
+main > section.shop-page,
+main > section.contact {
+    padding-top: 80px;
+     padding-left: 0;
+    padding-right: 0;
+}
+/* Shared Page Content Alignment */
+
+main > section.works-page > :first-child,
+main > section.about-page > :first-child,
+main > section.shop-page > :first-child,
+main > section.contact > :first-child {
+    margin-top: 0;
+}
+/* Shared Page Title Style */
+
+main > section.works-page > h2,
+main > section.about-page > h2,
+main > section.shop-page > h2,
+main > section.contact > h2 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    text-align: left;
+}
+/* Homepage Hero - Artistic Entrance Animation */
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main > section.hero h2 {
+    animation: heroFadeIn 1.8s ease-out both;
+}
+
+main > section.hero p {
+    animation: heroFadeIn 1.8s ease-out 0.4s both;
+}
+
+main > section.hero button {
+    animation: heroFadeIn 1.8s ease-out 0.8s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main > section.hero h2,
+    main > section.hero p,
+    main > section.hero button {
+        animation: none;
+    }
+}
+/* Homepage Hero Title */
+
+main > section.hero h2 {
+    font-size: clamp(52px, 6vw, 80px);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+/* Gallery - Scroll Reveal Animation */
+
+@media (prefers-reduced-motion: no-preference) {
+    .featured-gallery .artwork-card {
+        opacity: 0;
+        transform: translateY(35px);
+        transition:
+            opacity 1.4s ease,
+            transform 1.4s ease;
+    }
+
+    .featured-gallery .artwork-card.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Mobile Artwork - Grayscale to Color */
+
+@media (max-width: 700px) {
+    #works-grid .artwork-card img {
+        filter: grayscale(100%);
+        transition: filter 1.2s ease;
+    }
+
+    #works-grid .artwork-card.is-color img {
+        filter: grayscale(0%);
+    }
+}
+/* Home Gallery - Mobile Grayscale to Color */
+
+@media (max-width: 700px) {
+    .featured-gallery .artwork-card img {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+    }
+
+    .featured-gallery .artwork-card.is-color img {
+        filter: grayscale(0%) !important;
+    }
+}
+/* About Title - Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .about-page > h2 {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .about-page > h2.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* About Page - Text Scroll Reveal (Desktop) */
+
+@media (prefers-reduced-motion: no-preference) {
+    .about-text {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .about-text.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Portrait - Mobile Scroll Color */
+
+@media (max-width: 700px) {
+    .about-image img {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+    }
+
+    .about-image.is-color img {
+        filter: grayscale(0%) !important;
+    }
+}
+/* Works Page - Desktop Text Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .works-page > h2,
+.works-page > .works-intro {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+    .works-page > h2.is-visible,
+    .works-page > .works-intro.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Shop Page - Text Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .shop-page > .shop-label,
+    .shop-page > h2,
+    .shop-page > .shop-intro {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .shop-page > .shop-label.is-visible,
+    .shop-page > h2.is-visible,
+    .shop-page > .shop-intro.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}/* Contact Page - Text Scroll Reveal */
+
+@media (prefers-reduced-motion: no-preference) {
+    .contact > h2,
+    .contact > p {
+        opacity: 0;
+       transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .contact > h2.is-visible,
+    .contact > p.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Privacy Policy - Page Title */
+.privacy > h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+}
+/* Privacy Policy - Title Reveal */
+@media (prefers-reduced-motion: no-preference) {
+    .privacy > h2 {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .privacy > h2.is-visible {
+        opacity: 1;
+         transform: translateY(0);
+    }
+}
+/* Explore My Works Button */
+.hero-button {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: #222;
+    text-decoration: none;
+    border: 1px solid #222;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #666666;
+    color: #fff;
+}
+/* Project detail page - artwork image size */
+
+#project-artworks {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#project-artworks .artwork-card img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+}
+/* Project page - main visual */
+
+.project-hero {
+    width: 100%;
+    height: 420px;
+    background-color: #eeece7;
+    border-radius: 4px;
+    margin: 40px auto 30px;
+}
+/* Project page - artwork gallery */
+
+#project-artworks {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+}
+
+#project-artworks .artwork-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    #project-artworks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+/* Project description */
+
+.project-description {
+    max-width: 600px;
+    margin: 80px 0 100px;
+    text-align: left;
+}
+
+.project-description h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.project-description p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+}
+/* Works page - staggered project gallery */
+
+#works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px;
+    align-items: start;
+}
+
+#works-grid .artwork-card:nth-child(even) {
+    margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+    #works-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    #works-grid .artwork-card:nth-child(even) {
+        margin-top: 0;
+    }
+}
+/* Works page - project cover images */
+
+#works-grid .artwork-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Works page - project titles */
+
+#works-grid .artwork-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+#works-grid .artwork-card p {
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 1px;
+}
+/* Works page - project cover hover */
+
+#works-grid .artwork-card {
+    overflow: hidden;
+}
+
+#works-grid .artwork-card img {
+    transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+@media (hover: hover) {
+    #works-grid .artwork-card:hover img {
+        transform: scale(1.025);
+    }
+}
