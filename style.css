@@ -1056,3 +1056,21 @@ main > section.hero h2 {
          transform: translateY(0);
     }
 }
+/* Explore My Works Button */
+.hero-button {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: #222;
+    text-decoration: none;
+    border: 1px solid #222;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #666666;
+    color: #fff;
+}
